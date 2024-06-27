@@ -15,6 +15,17 @@ public class TeamPointsStatistic implements Statistic {
         return result;
     }
 
+    public Map<String, Float> bestTenTeams(Map<String, Float> map){
+        Map<String, Float> result = new LinkedHashMap<>();
+        int count = 0;
+        for (Map.Entry<String, Float> entry: map.entrySet()) {
+            if(count >= 10) break;
+            result.put(entry.getKey(), entry.getValue());
+            count++;
+        }
+        return result;
+    }
+
     private Map<String, Float> sort(Map map){
         List<Map.Entry<String, Float>> entries = new ArrayList<>(map.entrySet());
         entries.sort(Map.Entry.<String, Float>comparingByValue().reversed());

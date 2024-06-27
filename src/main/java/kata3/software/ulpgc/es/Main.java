@@ -15,7 +15,7 @@ public class Main {
                 .load();
         TeamPointsStatistic statistic = new TeamPointsStatistic();
         Map<String, Float> map = statistic.calculate(registers);
-
+        map = statistic.bestTenTeams(map);
 
 
     }
