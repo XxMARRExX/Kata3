@@ -21,5 +21,5 @@ public class MainFrame extends JFrame {
         return display;
     }
 
-    public BarChartDisplay getBarChartDisplay() { return barChartDisplay; }
+    public BarChartDisplay barChartDisplay() { return barChartDisplay; }
 }

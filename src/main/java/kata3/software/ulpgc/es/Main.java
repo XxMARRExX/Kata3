@@ -1,6 +1,7 @@
 package kata3.software.ulpgc.es;
 
 import model.kata3.software.ulpgc.es.*;
+import view.kata3.software.ulpgc.es.*;
 
 import java.io.File;
 import java.util.List;
@@ -17,7 +18,9 @@ public class Main {
         Map<String, Float> map = statistic.calculate(registers);
         map = statistic.bestTenTeams(map);
 
-
+        MainFrame mainFrame = new MainFrame();
+        mainFrame.barChartDisplay().show("Team Points Statistics", map);
+        mainFrame.setVisible(true);
     }
 
 }
